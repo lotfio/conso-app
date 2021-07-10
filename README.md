@@ -1,0 +1,1 @@
+# Conso Startup application template

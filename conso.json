@@ -1,0 +1,9 @@
+{
+    "src": [
+        "src",
+        "vendor"
+    ],
+    "build": "bin",
+    "stub":  "stub",
+    "phar":  "app.phar"
+}

@@ -1,0 +1,26 @@
+#!/usr/bin/env php
+<?php declare(strict_types=1);
+
+use Conso\{
+    Conso,Input,Output
+};
+
+require 'vendor/autoload.php';
+
+$app = new Conso(new Input, new Output);
+
+$app->setSignature("\n.-.   .-..-.  .-.     .--.  .----. .----. 
+|  `.'  | \ \/ /     / {} \ | {}  }| {}  }
+| |\ /| |  }  {     /  /\  \| .--' | .--' 
+`-' ` `-'  `--'     `-'  `-'`-'    `-'    \n"); // set application signature (top logo)
+$app->setName('app');     // set application name
+$app->setVersion('0.1.0'); // set application version
+$app->setAuthor('lotfio'); // set application author
+
+$app->setCommandsPath('src/Commands');
+$app->setCommandsNamespace('App\\Commands');
+
+// include your commands
+require_once 'src/commands.php';
+
+$app->run();
